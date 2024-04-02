@@ -8,9 +8,9 @@ using static System.Environment;
 public class OpenAiChat
 {
     // Get the environment variables or set the values here
-    string endpoint = GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT");
-    string key = GetEnvironmentVariable("AZURE_OPENAI_API_KEY");
-    string modelName = GetEnvironmentVariable("AZURE_OPENAI_MODEL_NAME");
+    string endpoint = GetEnvironmentVariable("AZURE_OPENAI_ENDPOINT", EnvironmentVariableTarget.User);
+    string key = GetEnvironmentVariable("AZURE_OPENAI_API_KEY", EnvironmentVariableTarget.User);
+    string modelName = GetEnvironmentVariable("AZURE_OPENAI_MODEL_NAME", EnvironmentVariableTarget.User);
 
     public async void AIClient(string question)
     {
